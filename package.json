@@ -1,0 +1,8 @@
+{
+  "name": "Roadmap",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ksushantonova/roadmap.git",
+  "author": "Ksusha Antonova <msksushantonova@gmail.com>",
+  "license": "MIT"
+}
