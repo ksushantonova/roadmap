@@ -1,8 +1,13 @@
 {
-  "name": "Roadmap",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/ksushantonova/roadmap.git",
-  "author": "Ksusha Antonova <msksushantonova@gmail.com>",
-  "license": "MIT"
+  "name": "chat",
+  "version": "0.0.1",
+  "description": "Awesome project developed with TypeORM.",
+  "devDependencies": {
+    "@types/node": "^8.10.54",
+    "ts-loader": "^6.1.0",
+    "ts-node": "^3.3.0",
+    "tslint": "^5.19.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "typescript": "^3.4.3"
+  }
 }
