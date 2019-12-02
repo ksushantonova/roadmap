@@ -1,5 +1,5 @@
-class HashTable {
-  private arr: Array<any>;
+class HashTable<T> {
+  private arr: T[][];
   private size: number;
 
   constructor(size: number = 13) {
@@ -7,24 +7,23 @@ class HashTable {
     this.size = size;
   }
 
-  public setElement(key: string, val: any) {
-    const index: any = this.hash(key);
-    this.arr[index] = [key, val];
+  public setElement<T>(key: string, val: T) {
+    const index: number = this.hash(key);
+    const arr = new Array();
+    arr.push(key);
+    arr.push(val);
+    this.arr[index] = arr;
   }
 
   public getElement(key: string) {
-    const index: any = this.hash(key);
+    const index: number = this.hash(key);
     return this.arr[index];
   }
 
-  public dump() {
-    return this.arr;
-  }
-
-  private hash(str: any) {
+  private hash(str: string) {
     let index = 0;
-    for (const el in str) {
-      index += str.charCodeAt(el) * (el + 1 as any);
+    for (let i = 0; i < str.length; i++) {
+      index += str.charCodeAt(i) * (i + 1 as any);
     }
     return index % this.size;
   }
@@ -33,4 +32,3 @@ class HashTable {
 const hashTable = new HashTable();
 hashTable.setElement('booo', 'ddd');
 console.log(hashTable.getElement('booo'));
-console.log(hashTable.dump());
