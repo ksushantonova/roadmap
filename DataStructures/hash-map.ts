@@ -7,7 +7,7 @@ class HashTable<T> {
     this.size = size;
   }
 
-  public setElement<T>(key: string, val: T) {
+  public set<T>(key: string, val: T) {
     const index: number = this.hash(key);
     const arr = new Array();
     arr.push(key);
@@ -15,7 +15,7 @@ class HashTable<T> {
     this.arr[index] = arr;
   }
 
-  public getElement(key: string) {
+  public get(key: string) {
     const index: number = this.hash(key);
     return this.arr[index];
   }
@@ -28,7 +28,3 @@ class HashTable<T> {
     return index % this.size;
   }
 }
-
-const hashTable = new HashTable();
-hashTable.setElement('booo', 'ddd');
-console.log(hashTable.getElement('booo'));
